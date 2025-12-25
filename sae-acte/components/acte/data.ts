@@ -160,7 +160,7 @@ export const stats = [
   { number: '300+', label: 'Jeunes formés' },
   { number: '80+', label: 'Entrepreneurs accompagnés' },
   { number: '25+', label: 'Entreprises partenaires' },
-  { number: '10+', label: 'Financements obtenus' }
+  { number: '3+', label: 'Financements obtenus' }
 ];
 
 export const entrepreneurServices = [
@@ -168,4 +168,28 @@ export const entrepreneurServices = [
   'Appui en communication et visibilité digitale',
   'Accompagnement à la recherche de financement',
   'Coaching de pitch et présentation aux investisseurs'
+];
+
+export const partners = [
+  { name: 'Segal family foundation' },
+  { name: 'YAS', logo: '/images_partenaires/Logo_yas.png' },
+  { name: 'TOGO DATA LAB', logo: '/images_partenaires/Logo_togo_data_lab.jpeg' },
+  { name: 'UK', logo: '/images_partenaires/Logo_UK.png' },
+  { name: 'CUBE', logo: '/images_partenaires/Logo_Cube.jpeg' },
+  { name: 'AIESEC', logo: '/images_partenaires/Logo_AIESEC.png' },
+  { name: 'cabinet ACTe', logo: '/images_partenaires/Logo_acte.jpeg' },
+  { name: 'TILTULAB', logo: '/images_partenaires/Logo_%20TILTULAB.png' },
+  { name: 'FAEIJ', logo: '/images_partenaires/Logo_FAEIJ.png' },
+  { name: 'EZAD BTP', logo: '/images_partenaires/Logo_EZAD_BTP.png' },
+  { name: 'AMAC GC' },
+  { name: 'CABINET FORCE DE LA NATURE' },
+  { name: 'STARLAB' },
+  { name: 'ECOLABTOGO', logo: '/images_partenaires/Logo_ECOLABTOGO.jpeg' },
+  { name: 'TOGOCARE' },
+  { name: 'EGLIX' },
+  { name: 'MIGEC GROUP', logo: '/images_partenaires/Logo_MIGEC_GROUP.jpeg' },
+  { name: 'CRE COMMUNICATION', logo: '/images_partenaires/logo_%20CRE.png' },
+  { name: 'CEGEC', logo: '/images_partenaires/logo_CEGEC.jpg' },
+  { name: 'TEAM DU TIGRE' },
+  { name: 'JERANI PEARLS' }
 ];

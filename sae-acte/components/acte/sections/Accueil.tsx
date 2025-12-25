@@ -6,12 +6,15 @@ import {
   Calculator,
   FolderKanban,
   Globe,
+  Lightbulb,
   Megaphone,
   Scale,
+  ShieldCheck,
+  Target,
   Users,
   ClipboardCheck
 } from 'lucide-react';
-import { services, stats } from '../data';
+import { services, stats, partners, valeurs } from '../data';
 
 type AccueilProps = {
   expandedService: string | null;
@@ -81,19 +84,57 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
     audit: ClipboardCheck,
     projet: FolderKanban
   };
+  const valeurIcons = {
+    collaboration: Users,
+    engagement: Target,
+    integrite: ShieldCheck,
+    innovation: Lightbulb,
+    inclusion: Globe
+  } as const;
 
   return (
     <div>
-      <section className="bg-gradient-to-br from-[#044460] via-[#00b3ab] to-[#044460] text-white py-20">
+      <section
+        className="bg-cover bg-center text-white py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero1.jpg')"
+        }}
+      >
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">SAE ACTE</h1>
-          <p className="text-2xl mb-4">Votre partenaire stratégique de développement</p>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Nous vous outillons et vous formons dans les domaines clés du business.
+          <h1 className="text-5xl font-bold mb-6"> ACTE</h1>
+          <p className="text-2xl mb-4">
+            Appui En Compétences Et En Transformation Pour L’employabilité Des Jeunes
           </p>
-          <button className="bg-[#00b3ab] text-white px-8 py-3 rounded-full font-bold hover:bg-[#00b3ab] transition">
+          <p className="text-xl font-semibold">POURQUOI ACTE ?</p>
+          {/* <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Nous vous outillons et vous formons dans les domaines clés du business.
+          </p> */}
+          {/* <button className="bg-[#00b3ab] text-white px-8 py-3 rounded-full font-bold hover:bg-[#00b3ab] transition">
             Découvrir nos services
-          </button>
+          </button> */}
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
+              <h2 className="text-2xl font-bold mb-4 text-[#044460]">NOTRE VISION</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Un monde où chaque jeune et femmes grâce aux compétences numériques, managériales et
+                entrepreneuriales s’épanouit et devient acteur du succès, moteur de changement et du
+                développement socio-économique.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
+              <h2 className="text-2xl font-bold mb-4 text-[#044460]">NOTRE MISSION</h2>
+              <p className="text-gray-700 leading-relaxed">
+                Nous renforçons les compétences des jeunes et femmes au Togo pour réduire le chômage et
+                favoriser le développement socio-économique.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -133,16 +174,37 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-[#044460]">Notre Promesse</h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-12">
-            Nous croyons qu'une entreprise performante repose sur deux piliers essentiels :
-            une gestion financière solide et une planification/communication digitale.
-          </p>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Notre promesse : vous accompagner jusqu'à l'atteinte de vos objectifs.
-          </p>
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-[#044460]">Nos Valeurs</h2>
+          <div className="grid md:grid-cols-5 gap-6">
+            {valeurs.map((valeur, idx) => {
+              const Icon = valeurIcons[valeur.icon as keyof typeof valeurIcons];
+              return (
+                <div key={idx} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+                  <div className="flex justify-center mb-4">
+                    <Icon className="h-10 w-10 text-[#00b3ab]" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2 text-[#044460]">{valeur.title}</h3>
+                  <p className="text-sm text-gray-600">{valeur.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-4 text-[#044460]">Notre Promesse</h2>
+          <p className="text-xl text-gray-700">
+            Former et accompagner chaque jeune et femme vers l'emploi et/ou l'auto-emploi.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-12 text-[#044460]">Nos chiffres en disent</h2>
           <div ref={statsRef} className="grid md:grid-cols-4 gap-8 mt-12">
             {parsedStats.map((stat, idx) => (
               <div key={stat.label} className="text-center">
@@ -157,30 +219,49 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
         </div>
       </section>
 
-    <section className="py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-12 text-[#044460]">Ils nous ont fait confiance</h2>
-        <p className="text-gray-700 max-w-2xl mx-auto">
-          Des organisations locales et internationales nous font confiance pour
-          accompagner les talents et les entrepreneurs.
-        </p>
-      </div>
-    </section>
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-12 text-[#044460]">Ils nous ont fait confiance</h2>
+          <p className="text-gray-700 max-w-2xl mx-auto">
+            Des organisations locales et internationales nous font confiance pour
+            accompagner les talents et les entrepreneurs.
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="border border-gray-200 bg-white rounded-lg px-4 py-6 text-sm font-semibold text-[#044460] flex items-center justify-center"
+              >
+                {partner.logo ? (
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-12 w-full object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  partner.name
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-6 text-[#044460]">Contactez-nous</h2>
-        <p className="text-gray-700 max-w-2xl mx-auto mb-8">
-          Parlons de vos besoins et de la meilleure façon de vous accompagner.
-        </p>
-        <button
-          className="bg-[#044460] text-white px-8 py-3 rounded-full font-bold hover:bg-[#044460] transition"
-          onClick={onContactClick}
-        >
-          Accéder au formulaire
-        </button>
-      </div>
-    </section>
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold mb-6 text-[#044460]">Contactez-nous</h2>
+          <p className="text-gray-700 max-w-2xl mx-auto mb-8">
+            Parlons de vos besoins et de la meilleure façon de vous accompagner.
+          </p>
+          <button
+            className="bg-[#044460] text-white px-8 py-3 rounded-full font-bold hover:bg-[#044460] transition"
+            onClick={onContactClick}
+          >
+            Nous Contacter
+          </button>
+        </div>
+      </section>
     </div>
   );
 };

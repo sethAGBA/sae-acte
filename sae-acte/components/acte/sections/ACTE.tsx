@@ -1,57 +1,31 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CheckCircle, ChevronDown, Globe, Lightbulb, ShieldCheck, Target, Users } from 'lucide-react';
-import { formations, valeurs, acteStats, testimonials } from '../data';
+import { CheckCircle, ChevronDown } from 'lucide-react';
+import { formations, acteStats, testimonials, partners } from '../data';
 
 const ACTEPage = () => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
-  const valeurIcons = {
-    collaboration: Users,
-    engagement: Target,
-    integrite: ShieldCheck,
-    innovation: Lightbulb,
-    inclusion: Globe
-  } as const;
 
   return (
     <div>
-      <section className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white py-20">
+      <section
+        className="bg-cover bg-center text-white py-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero2.jpg.avif')"
+        }}
+      >
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">ACTE</h1>
-          <p className="text-2xl mb-4">Appui En Compétences Et En Transformation</p>
-          <p className="text-xl">Pour L'employabilité Des Jeunes</p>
-        </div>
-      </section>
-
-      <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#044460]">Nos Valeurs</h2>
-          <div className="grid md:grid-cols-5 gap-6">
-            {valeurs.map((valeur, idx) => {
-              const Icon = valeurIcons[valeur.icon as keyof typeof valeurIcons];
-              return (
-                <div key={idx} className="text-center p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
-                  <div className="flex justify-center mb-4">
-                    <Icon className="h-10 w-10 text-[#00b3ab]" />
-                  </div>
-                <h3 className="font-bold text-lg mb-2 text-[#044460]">{valeur.title}</h3>
-                <p className="text-sm text-gray-600">{valeur.desc}</p>
-                </div>
-              );
-            })}
-          </div>
+          <p className="text-2xl mb-4">Appui en Compétences et en Transformation </p>
+          <p className="text-xl">Pour L'employabilité des Jeunes</p>
         </div>
       </section>
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4 text-[#044460]">Notre Promesse</h2>
-          <p className="text-xl text-center text-gray-700 mb-12">
-            Former et accompagner chaque jeune et femme vers l'emploi et/ou l'auto-emploi.
-          </p>
-
-          <h3 className="text-2xl font-bold text-center mb-8 text-[#044460]">Nos Formations Orientées Métiers</h3>
+          <h2 className="text-3xl font-bold text-center mb-8 text-[#044460]">Nos Formations Orientées Métiers</h2>
 
           <div className="grid gap-6">
             {formations.map((formation) => {
@@ -80,6 +54,14 @@ const ACTEPage = () => {
                             <span className="text-gray-700">{item}</span>
                           </div>
                         ))}
+                      </div>
+                      <div className="mt-6 flex flex-wrap items-center gap-3">
+                        <button className="border border-[#044460] text-[#044460] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#044460]/10 transition">
+                          Voir plus
+                        </button>
+                        <button className="bg-[#044460] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#044460] transition">
+                          S'inscrire
+                        </button>
                       </div>
                     </div>
                   )}
@@ -110,6 +92,25 @@ const ACTEPage = () => {
           <p className="text-gray-700 max-w-2xl mx-auto">
             Des entreprises et institutions nous confient la montée en compétences de leurs talents.
           </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+            {partners.map((partner) => (
+              <div
+                key={partner.name}
+                className="border border-gray-200 bg-white rounded-lg px-4 py-6 text-sm font-semibold text-[#044460] flex items-center justify-center"
+              >
+                {partner.logo ? (
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="h-12 w-full object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  partner.name
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

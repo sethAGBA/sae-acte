@@ -3,7 +3,13 @@ import { Briefcase, Building2, GraduationCap, Handshake, UserRound, Users } from
 
 const InsertionPage = () => (
   <div>
-    <section className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white py-20">
+    <section
+      className="bg-cover bg-center text-white py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero2.jpg.avif')"
+      }}
+    >
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h1 className="text-5xl font-bold mb-6">Insertion Professionnelle</h1>
         <p className="text-2xl">Trouver un stage, un emploi ou un talent n'a jamais été aussi simple</p>

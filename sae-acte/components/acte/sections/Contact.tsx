@@ -15,7 +15,13 @@ type ContactPageProps = {
 
 const ContactPage = ({ contactForm, onContactChange, onSubmit }: ContactPageProps) => (
   <div>
-    <section className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white py-20">
+    <section
+      className="bg-cover bg-center text-white py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero1.jpg')"
+      }}
+    >
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h1 className="text-5xl font-bold mb-6">Contactez-nous</h1>
         <p className="text-2xl">Nous sommes a votre ecoute</p>

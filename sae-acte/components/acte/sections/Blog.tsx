@@ -3,7 +3,13 @@ import { ArrowUpRight, BookOpen, Lightbulb, MessageSquareText } from 'lucide-rea
 
 const BlogPage = () => (
   <div>
-    <section className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white py-20">
+    <section
+      className="bg-cover bg-center text-white py-20"
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero2.jpg.avif')"
+      }}
+    >
       <div className="max-w-6xl mx-auto px-4 text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold mb-6">
           <BookOpen className="h-4 w-4" />
