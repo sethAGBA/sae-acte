@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { CheckCircle, ChevronDown } from 'lucide-react';
+import HeroCarousel from '../HeroCarousel';
+import SectionAccent from '../SectionAccent';
 import { formations, acteStats, testimonials, partners } from '../data';
 
 const ACTEPage = () => {
@@ -9,23 +11,23 @@ const ACTEPage = () => {
 
   return (
     <div>
-      <section
-        className="bg-cover bg-center text-white py-20"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero2.jpg.avif')"
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-6">ACTE</h1>
-          <p className="text-2xl mb-4">Appui en Compétences et en Transformation </p>
-          <p className="text-xl">Pour L'employabilité des Jeunes</p>
-        </div>
-      </section>
+      <HeroCarousel
+        title="ACTE"
+        lines={[
+          'Appui en Compétences et en Transformation',
+          "Pour L'employabilité des Jeunes"
+        ]}
+        images={[
+          '/hero/le-candidat-s-adresse-au-directeur-de-l-embauche.jpg',
+          '/hero/un-homme-a-l-interview-enthousiaste-pour-l-opportunite-d-emploi-donne-des-reponses-detaillees.jpg',
+          '/hero/homme-se-presentant-aux-employeurs-lors-de-l-entretien-d-embauche-au-bureau.jpg'
+        ]}
+      />
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-[#044460]">Nos Formations Orientées Métiers</h2>
+          <h2 className="text-3xl font-bold text-center mb-4 text-[#044460]">Nos Formations Orientées Métiers</h2>
+          <SectionAccent className="mb-8" />
 
           <div className="grid gap-6">
             {formations.map((formation) => {
@@ -74,7 +76,8 @@ const ACTEPage = () => {
 
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-12 text-[#044460]">Nos chiffres en disent</h2>
+          <h2 className="text-3xl font-bold mb-4 text-[#044460]">Nos chiffres en disent</h2>
+          <SectionAccent className="mb-8" />
           <div className="grid md:grid-cols-3 gap-8">
             {acteStats.map((stat) => (
               <div key={stat.label} className="bg-[#044460]/5 p-8 rounded-lg">
@@ -88,7 +91,8 @@ const ACTEPage = () => {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-12 text-[#044460]">Ils nous ont fait confiance</h2>
+          <h2 className="text-3xl font-bold mb-4 text-[#044460]">Ils nous ont fait confiance</h2>
+          <SectionAccent className="mb-8" />
           <p className="text-gray-700 max-w-2xl mx-auto">
             Des entreprises et institutions nous confient la montée en compétences de leurs talents.
           </p>
@@ -116,13 +120,23 @@ const ACTEPage = () => {
 
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-[#044460]">Ce que disent nos étudiants</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="text-3xl font-bold text-center mb-4 text-[#044460]">Témoignages</h2>
+          <SectionAccent className="mb-8" />
+          <div className="grid md:grid-cols-2 gap-6">
             {testimonials.map((item) => (
               <div key={item.name} className="bg-gray-50 p-6 rounded-lg shadow-sm">
-                <p className="text-gray-700 mb-4">“{item.quote}”</p>
-                <div className="font-bold text-[#044460]">{item.name}</div>
-                <div className="text-sm text-gray-600">{item.role}</div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="h-24 w-24 rounded-full object-cover"
+                    loading="lazy"
+                  />
+                  <div>
+                    <p className="text-gray-700 mb-4">“{item.quote}”</p>
+                    <div className="font-bold text-[#044460]">{item.name}</div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -131,7 +145,8 @@ const ACTEPage = () => {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-6 text-[#044460]">Contactez-nous</h2>
+          <h2 className="text-3xl font-bold mb-4 text-[#044460]">Contactez-nous</h2>
+          <SectionAccent className="mb-6" />
           <p className="text-gray-700 max-w-2xl mx-auto mb-8">
             Prêt à booster vos compétences ou celles de vos équipes ? Écrivons la suite ensemble.
           </p>

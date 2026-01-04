@@ -1,24 +1,25 @@
 import React from 'react';
 import { ArrowUpRight, BookOpen, Lightbulb, MessageSquareText } from 'lucide-react';
+import HeroCarousel from '../HeroCarousel';
+import SectionAccent from '../SectionAccent';
 
 const BlogPage = () => (
   <div>
-    <section
-      className="bg-cover bg-center text-white py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero2.jpg.avif')"
-      }}
-    >
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold mb-6">
+    <HeroCarousel
+      title="Blog ACTE"
+      lines={['Conseils, interviews et inspiration pour avancer.']}
+      eyebrow={(
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/30 px-4 py-2 text-sm font-semibold">
           <BookOpen className="h-4 w-4" />
           Actualités & bonnes pratiques
         </div>
-        <h1 className="text-5xl font-bold mb-6">Blog ACTE</h1>
-        <p className="text-2xl">Conseils, interviews et inspiration pour avancer.</p>
-      </div>
-    </section>
+      )}
+      images={[
+        '/hero/scene-de-bureau-avec-ordinateur-portable.jpg',
+        '/hero/portrait-de-jolie-femme-cubaine-presentant-les-informations-statistiques-a-son-patron-meconnaissable.jpg',
+        '/hero/les-femmes-d-affaires-parlant-pres-du-bureau-pendant-une-pause-cafe-dans-le-couloir-de-la-grande-societe.jpg'
+      ]}
+    />
 
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
@@ -31,6 +32,7 @@ const BlogPage = () => (
               <span className="text-sm uppercase tracking-wide text-white/80">Inspiration ACTE</span>
             </div>
             <h2 className="text-3xl font-bold mb-4">Les parcours qui transforment des idées en carrières</h2>
+            <SectionAccent align="left" className="mb-6" />
             <p className="text-white/90 mb-8">
               Découvrez des portraits, des réussites et des retours d'expérience de talents formés par ACTE.
             </p>

@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import NavBar from '@/components/acte/NavBar';
+import Footer from '@/components/acte/Footer';
 import "./globals.css";
 
-const epoch = localFont({
-  src: "../public/fonts/Epoch-BF6881cf42e6637.otf",
-  variable: "--font-epoch",
+const nexa = localFont({
+  src: [
+    {
+      path: "../public/fonts/nexa 2/Nexa-ExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/nexa 2/Nexa-Heavy.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-nexa",
   display: "swap",
 });
 
@@ -57,8 +70,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${epoch.variable} ${gilroy.variable} antialiased`}>
-        {children}
+      <body className={`${nexa.variable} ${gilroy.variable} antialiased`}>
+        <NavBar />
+        <main>
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

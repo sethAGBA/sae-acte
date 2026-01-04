@@ -1,5 +1,7 @@
 import React from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import HeroCarousel from '../HeroCarousel';
+import SectionAccent from '../SectionAccent';
 
 type ContactForm = {
   name: string;
@@ -15,24 +17,22 @@ type ContactPageProps = {
 
 const ContactPage = ({ contactForm, onContactChange, onSubmit }: ContactPageProps) => (
   <div>
-    <section
-      className="bg-cover bg-center text-white py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero1.jpg')"
-      }}
-    >
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h1 className="text-5xl font-bold mb-6">Contactez-nous</h1>
-        <p className="text-2xl">Nous sommes a votre ecoute</p>
-      </div>
-    </section>
+    <HeroCarousel
+      title="Contactez-nous"
+      lines={['Nous sommes a votre ecoute']}
+      images={[
+        '/hero/scene-de-bureau-avec-ordinateur-portable.jpg',
+        '/hero/heureuse-femme-d-affaires-afro-americaine-travaillant-sur-un-pave-tactile-au-bureau.jpg',
+        '/hero/affilies-collaborant-dans-un-espace-de-travail-haut-de-gamme-pour-determiner-l-allocation-des-ressources.jpg'
+      ]}
+    />
 
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-start">
           <div className="bg-gradient-to-br from-[#044460]/5 to-[#00b3ab]/10 rounded-3xl p-8">
-            <h2 className="text-2xl font-bold mb-6 text-[#044460]">Informations de contact</h2>
+            <h2 className="text-2xl font-bold mb-4 text-[#044460]">Informations de contact</h2>
+            <SectionAccent align="left" className="mb-6" />
             <div className="space-y-5">
               <div className="flex items-start gap-4">
                 <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center shadow-sm">
@@ -83,7 +83,8 @@ const ContactPage = ({ contactForm, onContactChange, onSubmit }: ContactPageProp
           </div>
 
           <div className="bg-white rounded-3xl border border-[#044460]/10 shadow-sm p-8">
-            <h2 className="text-2xl font-bold mb-6 text-[#044460]">Envoyez-nous un message</h2>
+            <h2 className="text-2xl font-bold mb-4 text-[#044460]">Envoyez-nous un message</h2>
+            <SectionAccent align="left" className="mb-6" />
             <div className="space-y-4">
               <input
                 type="text"

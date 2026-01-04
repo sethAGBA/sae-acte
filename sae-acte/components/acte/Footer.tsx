@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Footer = () => (
   <footer className="bg-gray-900 text-white py-12">
@@ -8,16 +9,23 @@ const Footer = () => (
           <h3 className="font-bold text-xl mb-4">SAE ACTE</h3>
           <p className="text-gray-400">Votre partenaire stratégique de développement</p>
         </div>
-        <div>
-          <h4 className="font-bold mb-4">Liens rapides</h4>
-          <div className="space-y-2">
-            {['Accueil', 'ACTE', 'SAE', 'Insertion', 'Blog', 'Contact'].map((link) => (
-              <div key={link} className="text-gray-400 hover:text-white cursor-pointer">
-                {link}
-              </div>
-            ))}
+          <div>
+            <h4 className="font-bold mb-4">Liens rapides</h4>
+            <div className="space-y-2">
+              {[
+                { label: 'Accueil', href: '/' },
+                { label: 'ACTE', href: '/acte' },
+                { label: 'SAE', href: '/sae' },
+                { label: 'Insertion', href: '/insertion' },
+                { label: 'Blog', href: '/blog' },
+                { label: 'Contact', href: '/contact' }
+              ].map((link) => (
+                <Link key={link.href} href={link.href} className="text-gray-400 hover:text-white">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
         <div>
           <h4 className="font-bold mb-4">Services</h4>
           <div className="space-y-2 text-gray-400">

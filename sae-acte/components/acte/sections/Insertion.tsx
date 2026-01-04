@@ -1,20 +1,19 @@
 import React from 'react';
 import { Briefcase, Building2, GraduationCap, Handshake, UserRound, Users } from 'lucide-react';
+import HeroCarousel from '../HeroCarousel';
+import SectionAccent from '../SectionAccent';
 
 const InsertionPage = () => (
   <div>
-    <section
-      className="bg-cover bg-center text-white py-20"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(4, 68, 96, 0.75), rgba(0, 179, 171, 0.75)), url('/hero/hero2.jpg.avif')"
-      }}
-    >
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h1 className="text-5xl font-bold mb-6">Insertion Professionnelle</h1>
-        <p className="text-2xl">Trouver un stage, un emploi ou un talent n'a jamais été aussi simple</p>
-      </div>
-    </section>
+    <HeroCarousel
+      title="Insertion Professionnelle"
+      lines={["Trouver un stage, un emploi ou un talent n'a jamais été aussi simple"]}
+      images={[
+        '/hero/les-femmes-d-affaires-parlant-pres-du-bureau-pendant-une-pause-cafe-dans-le-couloir-de-la-grande-societe.jpg',
+        '/hero/equipe-de-collegues-afro-americains-analysant-des-rapports-de-vente-sur-des-documents-travaillant-sur-une-strategie-financiere-pour-la-croissance-de-l-entreprise-employes-de-l-entreprise-travaillant-en-equipe.jpg',
+        '/hero/reunion-d-affaires-dans-un-cafe.jpg'
+      ]}
+    />
 
     <section className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
@@ -99,7 +98,8 @@ const InsertionPage = () => (
 
     <section className="py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-12 text-[#044460]">Notre Valeur Ajoutée</h2>
+        <h2 className="text-3xl font-bold mb-4 text-[#044460]">Notre Valeur Ajoutée</h2>
+        <SectionAccent className="mb-8" />
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl p-8 shadow-sm">
             <div className="flex justify-center mb-4">

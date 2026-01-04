@@ -30,5 +30,32 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-epoch), var(--font-gilroy), Arial, Helvetica, sans-serif;
+  font-family: var(--font-nexa), var(--font-gilroy), Arial, Helvetica, sans-serif;
+}
+
+@keyframes accentLine {
+  0% {
+    transform: scaleX(0.6);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(0.6);
+    opacity: 0.5;
+  }
+}
+
+@keyframes accentDot {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
 }
