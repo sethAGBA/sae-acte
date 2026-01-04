@@ -4,12 +4,30 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import { navTabs } from './data';
+import { navTabs, type NavTab } from './data';
 
-const NavBar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+type NavBarProps = {
+  activeTab?: NavTab;
+  onTabChange?: (tab: NavTab) => void;
+  mobileMenuOpen?: boolean;
+  onToggleMobile?: () => void;
+};
+
+const NavBar = ({ activeTab, onTabChange, mobileMenuOpen, onToggleMobile }: NavBarProps) => {
+  const [internalMobileOpen, setInternalMobileOpen] = useState(false);
   const pathname = usePathname();
-  const activeTab = pathname === '/' ? 'accueil' : pathname.split('/')[1] ?? 'accueil';
+  const derivedActiveTab = pathname === '/' ? 'accueil' : (pathname.split('/')[1] ?? 'accueil');
+  const currentTab = activeTab ?? derivedActiveTab;
+  const isMobileMenuOpen = mobileMenuOpen ?? internalMobileOpen;
+  const toggleMobile = onToggleMobile ?? (() => setInternalMobileOpen((open) => !open));
+  const handleTabClick = (tab: NavTab) => {
+    if (onTabChange) {
+      onTabChange(tab);
+    }
+    if (isMobileMenuOpen) {
+      toggleMobile();
+    }
+  };
 
   const tabHref = (tab: string) => (tab === 'accueil' ? '/' : `/${tab}`);
 
@@ -60,56 +78,99 @@ const NavBar = () => {
             <div className="hidden md:flex items-center flex-1">
               <div className="flex flex-1 justify-center space-x-8">
                 {navTabs.filter((tab) => tab !== 'contact').map((tab) => (
-                  <Link
-                    key={tab}
-                    href={tabHref(tab)}
-                    className={`capitalize text-base font-medium transition-colors relative py-2 ${
-                      activeTab === tab
-                        ? 'text-[#00b3ab]'
-                        : 'text-gray-700 hover:text-[#00b3ab]'
-                    }`}
-                  >
-                    {tab}
-                    {activeTab === tab && (
-                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#00b3ab]"></span>
-                    )}
-                  </Link>
+                  onTabChange ? (
+                    <button
+                      key={tab}
+                      type="button"
+                      onClick={() => handleTabClick(tab)}
+                      className={`capitalize text-base font-medium transition-colors relative py-2 ${
+                        currentTab === tab
+                          ? 'text-[#00b3ab]'
+                          : 'text-gray-700 hover:text-[#00b3ab]'
+                      }`}
+                    >
+                      {tab}
+                      {currentTab === tab && (
+                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#00b3ab]"></span>
+                      )}
+                    </button>
+                  ) : (
+                    <Link
+                      key={tab}
+                      href={tabHref(tab)}
+                      className={`capitalize text-base font-medium transition-colors relative py-2 ${
+                        currentTab === tab
+                          ? 'text-[#00b3ab]'
+                          : 'text-gray-700 hover:text-[#00b3ab]'
+                      }`}
+                    >
+                      {tab}
+                      {currentTab === tab && (
+                        <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#00b3ab]"></span>
+                      )}
+                    </Link>
+                  )
                 ))}
               </div>
-              <Link
-                href="/contact"
-                className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white px-6 py-2 rounded hover:from-[#03384f] hover:to-[#009a93] transition-colors font-medium"
-              >
-                Contact
-              </Link>
+              {onTabChange ? (
+                <button
+                  type="button"
+                  onClick={() => handleTabClick('contact')}
+                  className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white px-6 py-2 rounded hover:from-[#03384f] hover:to-[#009a93] transition-colors font-medium"
+                >
+                  Contact
+                </button>
+              ) : (
+                <Link
+                  href="/contact"
+                  className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white px-6 py-2 rounded hover:from-[#03384f] hover:to-[#009a93] transition-colors font-medium"
+                >
+                  Contact
+                </Link>
+              )}
             </div>
 
             {/* Mobile menu button */}
             <button 
               className="md:hidden text-gray-700" 
-              onClick={() => setMobileMenuOpen((open) => !open)}
+              onClick={toggleMobile}
               aria-label="Ouvrir le menu"
             >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
 
           {/* Mobile Navigation */}
-          {mobileMenuOpen && (
+          {isMobileMenuOpen && (
             <div className="md:hidden pb-4 border-t">
               {navTabs.map((tab) => (
-                <Link
-                  key={tab}
-                  href={tabHref(tab)}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`block w-full text-left py-3 px-4 capitalize transition ${
-                    activeTab === tab
-                      ? 'text-[#00b3ab] bg-gray-50'
-                      : 'text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
-                  {tab}
-                </Link>
+                onTabChange ? (
+                  <button
+                    key={tab}
+                    type="button"
+                    onClick={() => handleTabClick(tab)}
+                    className={`block w-full text-left py-3 px-4 capitalize transition ${
+                      currentTab === tab
+                        ? 'text-[#00b3ab] bg-gray-50'
+                        : 'text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ) : (
+                  <Link
+                    key={tab}
+                    href={tabHref(tab)}
+                    onClick={() => setInternalMobileOpen(false)}
+                    className={`block w-full text-left py-3 px-4 capitalize transition ${
+                      currentTab === tab
+                        ? 'text-[#00b3ab] bg-gray-50'
+                        : 'text-gray-700 hover:bg-gray-50'
+                    }`}
+                  >
+                    {tab}
+                  </Link>
+                )
               ))}
             </div>
           )}

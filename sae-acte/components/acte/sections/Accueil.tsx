@@ -115,7 +115,7 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
           <div className="max-w-4xl mx-auto px-4">
             <div className="rounded-2xl border border-[#00b3ab]/20 bg-[#f4fbfa] p-8 shadow-sm">
               <h2 className="text-2xl md:text-3xl font-bold text-[#044460] mb-4">
-                Pourquoi ACTE
+                Pourquoi ACTE ?
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
                 ACTE est un projet dédié au renforcement des compétences des jeunes et des femmes,
