@@ -53,15 +53,20 @@ const ContactPage = ({ contactForm, onContactChange, onSubmit, status }: Contact
                   <div className="text-gray-600">es.actes@gmail.com</div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center shadow-sm">
-                  <MapPin className="w-6 h-6 text-[#044460]" />
+              <a 
+                href="https://share.google/ZVRZFzAppg4q1svWK" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-start gap-4 group"
+              >
+                <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center shadow-sm group-hover:bg-[#00b3ab] transition-colors">
+                  <MapPin className="w-6 h-6 text-[#044460] group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <div className="font-bold text-[#044460]">Adresse</div>
-                  <div className="text-gray-600">Kara, Togo</div>
+                  <div className="text-gray-600 group-hover:text-[#00b3ab] transition-colors underline decoration-[#00b3ab]/30 underline-offset-4">Kara, Togo</div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -135,6 +140,24 @@ const ContactPage = ({ contactForm, onContactChange, onSubmit, status }: Contact
               )}
             </form>
           </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Section Map */}
+    <section className="pb-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="h-[450px] w-full rounded-3xl overflow-hidden border border-[#044460]/10 shadow-xl">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31631.792440182663!2d1.1714444582967262!3d9.549416666014457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x102f195d80000001%3A0xc47e335559d80c0!2sKara!5e0!3m2!1sfr!2stg!4v1705060000000!5m2!1sfr!2stg"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Localisation Cabinet ACTe"
+          ></iframe>
         </div>
       </div>
     </section>

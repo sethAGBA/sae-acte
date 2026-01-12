@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Menu, X, Phone, Mail, Facebook, Music, Instagram, Linkedin } from 'lucide-react';
 import { navTabs, type NavTab } from './data';
 
 type NavBarProps = {
@@ -54,13 +54,13 @@ const NavBar = ({ activeTab, onTabChange, mobileMenuOpen, onToggleMobile }: NavB
             </a>
           </div>
           <div className="hidden md:flex items-center gap-4">
-            <a href="https://facebook.com" className="hover:text-white/80 transition"><Facebook size={18} /></a>
+            <a href="https://www.facebook.com/share/1CUnfk1FQm/" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition"><Facebook size={18} /></a>
             <span className="text-white/60">|</span>
-            <a href="https://twitter.com" className="hover:text-white/80 transition"><Twitter size={18} /></a>
+            <a href="https://www.tiktok.com/@cabinet.acte?_t=ZS-8wGsdl7QYjd&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition"><Music size={18} /></a>
             <span className="text-white/60">|</span>
-            <a href="https://instagram.com" className="hover:text-white/80 transition"><Instagram size={18} /></a>
+            <a href="https://www.instagram.com/cabinet.acte?igsh=ZmJsZG0xaG1sZzV5" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition"><Instagram size={18} /></a>
             <span className="text-white/60">|</span>
-            <a href="https://linkedin.com" className="hover:text-white/80 transition"><Linkedin size={18} /></a>
+            <a href="https://www.linkedin.com/in/dr-richard-kangni-kueviakoe-514371119" target="_blank" rel="noopener noreferrer" className="hover:text-white/80 transition"><Linkedin size={18} /></a>
           </div>
         </div>
       </div>
