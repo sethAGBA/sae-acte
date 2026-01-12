@@ -24,26 +24,37 @@ const SAEPage = () => (
       </button>
     </HeroCarousel>
 
-    <section className="py-16 bg-white">
+    <section className="py-12 bg-[#044460] text-white">
+      <div className="max-w-4xl mx-auto px-4 text-center">
+        <h2 className="text-2xl md:text-3xl font-bold mb-6">SAE ACTe : Transformer les idées en entreprises durables</h2>
+        <p className="text-lg text-white/90 leading-relaxed italic">
+          "Nous accompagnons les jeunes entrepreneurs dans la création, la gestion et la croissance de leurs projets."
+        </p>
+      </div>
+    </section>
+
+    <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4 text-[#044460]">Nos programmes d'accompagnement</h2>
-        <SectionAccent className="mb-8" />
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-[#044460] mb-4">Nos programmes d'accompagnement</h2>
+          <SectionAccent className="mx-auto" />
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-gradient-to-br from-[#044460]/5 to-[#00b3ab]/10 p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 text-[#044460]">Préincubation</h3>
+            <h3 className="text-xl font-bold mb-4 text-[#044460]">PREINCUBATION</h3>
             <p className="text-gray-700 mb-4">Structurer votre idée et votre business model</p>
             <div className="text-2xl font-bold text-[#044460]">3 mois</div>
           </div>
 
           <div className="bg-gradient-to-br from-[#00b3ab]/5 to-[#00b3ab]/10 p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 text-[#044460]">Incubation</h3>
+            <h3 className="text-xl font-bold mb-4 text-[#044460]">INCUBATION</h3>
             <p className="text-gray-700 mb-4">Formation + accompagnement technique et financier</p>
             <div className="text-2xl font-bold text-[#044460]">1 à 6 mois</div>
           </div>
 
           <div className="bg-gradient-to-br from-[#00b3ab]/5 to-[#00b3ab]/10 p-8 rounded-lg">
-              <h3 className="text-xl font-bold mb-4 text-[#044460]">Post-incubation</h3>
+            <h3 className="text-xl font-bold mb-4 text-[#044460]">POST-INCUBATION</h3>
             <p className="text-gray-700 mb-4">Suivi, visibilité et mentorat après lancement</p>
             <div className="text-2xl font-bold text-[#044460]">3 mois</div>
           </div>

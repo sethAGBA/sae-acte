@@ -11,7 +11,7 @@ const Footer = () => (
         </div>
           <div>
             <h4 className="font-bold mb-4">Liens rapides</h4>
-            <div className="space-y-2">
+            <div className="flex flex-col space-y-2">
               {[
                 { label: 'Accueil', href: '/' },
                 { label: 'ACTE', href: '/acte' },
@@ -40,7 +40,7 @@ const Footer = () => (
           <div className="space-y-2 text-gray-400">
             <div>Kara, Togo</div>
             <div>+228 92 21 75 64</div>
-            <div>+228 90 87 37 22</div>
+            <div>+228 98 00 07 59</div>
             <div>es.actes@gmail.com</div>
           </div>
         </div>

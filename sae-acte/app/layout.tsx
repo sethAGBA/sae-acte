@@ -30,7 +30,7 @@ const gilroy = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sae-acte.com"),
   title: {
-    default: "SAE ACTE | Appui en competences et transformation",
+    default: "SAE ACTE | Appui en Compétences et en Transformation pour l'Employabilité des Jeunes et Femmes",
     template: "%s | SAE ACTE"
   },
   description:
@@ -47,14 +47,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://sae-acte.com",
-    title: "SAE ACTE | Appui en competences et transformation",
+    title: "SAE ACTE | Appui en Compétences et en Transformation pour l'Employabilité des Jeunes et Femmes",
     description:
       "Formations metiers, insertion professionnelle, entrepreneuriat et accompagnement pour talents et entreprises.",
     siteName: "SAE ACTE"
   },
   twitter: {
     card: "summary_large_image",
-    title: "SAE ACTE | Appui en competences et transformation",
+    title: "SAE ACTE | Appui en Compétences et en Transformation pour l'Employabilité des Jeunes et Femmes",
     description:
       "Formations metiers, insertion professionnelle, entrepreneuriat et accompagnement pour talents et entreprises."
   },

@@ -6,60 +6,117 @@ export const services = [
     id: 'expertise',
     name: 'Expertise comptable',
     desc: 'Gestion comptable complète et conseil financier',
-    image: '/hero/scene-de-bureau-avec-ordinateur-portable.jpg'
+    image: '/hero/scene-de-bureau-avec-ordinateur-portable.jpg',
+    points: [
+      'Tenue et surveillance de comptabilité',
+      'Établissement des états financiers (bilan, compte de résultat)',
+      'Conseil en gestion et organisation comptable',
+      'Audit contractuel'
+    ]
   },
   {
     id: 'fiscale',
-    name: 'Fiscale',
+    name: 'Expertise Fiscale',
     desc: 'Optimisation fiscale et conformité',
     image:
-      '/hero/portrait-de-jolie-femme-cubaine-presentant-les-informations-statistiques-a-son-patron-meconnaissable.jpg'
+      '/hero/portrait-de-jolie-femme-cubaine-presentant-les-informations-statistiques-a-son-patron-meconnaissable.jpg',
+    points: [
+      'Déclarations fiscales mensuelles et annuelles',
+      'Optimisation de la charge fiscale',
+      'Assistance en cas de contrôle fiscal',
+      'Veille juridique et fiscale'
+    ]
   },
   {
     id: 'sociale',
-    name: 'Sociale',
+    name: 'Expertise Sociale',
     desc: 'Gestion sociale et paie',
     image:
-      '/hero/les-femmes-d-affaires-parlant-pres-du-bureau-pendant-une-pause-cafe-dans-le-couloir-de-la-grande-societe.jpg'
+      '/hero/les-femmes-d-affaires-parlant-pres-du-bureau-pendant-une-pause-cafe-dans-le-couloir-de-la-grande-societe.jpg',
+    points: [
+      'Gestion de la paie et des bulletins de salaire',
+      'Déclarations sociales (CNSS, ITS)',
+      'Gestion des contrats de travail',
+      'Conseil en droit du travail'
+    ]
   },
   {
     id: 'rh',
-    name: 'RH',
+    name: 'Expertise RH',
     desc: 'Recrutement et gestion des talents',
-    image: '/hero/homme-se-presentant-aux-employeurs-lors-de-l-entretien-d-embauche-au-bureau.jpg'
+    image: '/hero/homme-se-presentant-aux-employeurs-lors-de-l-entretien-d-embauche-au-bureau.jpg',
+    points: [
+      'Recrutement et sélection de talents',
+      'Gestion prévisionnelle des emplois et compétences (GPEC)',
+      'Évaluation des performances',
+      'Développement de la marque employeur'
+    ]
   },
   {
     id: 'marketing',
-    name: 'Marketing',
+    name: 'Expertise en Communication, Marketing et Digitale',
     desc: 'Stratégie marketing et communication',
     image:
-      '/hero/affilies-collaborant-dans-un-espace-de-travail-haut-de-gamme-pour-determiner-l-allocation-des-ressources.jpg'
+      '/hero/affilies-collaborant-dans-un-espace-de-travail-haut-de-gamme-pour-determiner-l-allocation-des-ressources.jpg',
+    points: [
+      'Études de marché et de positionnement',
+      'Élaboration de stratégies de communication',
+      'Gestion de l\'image de marque (Branding)',
+      'Marketing opérationnel et digital'
+    ]
   },
   {
     id: 'digital',
-    name: 'Stratégie digitale',
-    desc: 'Transformation digitale',
+    name: 'Expertise en IA et Data',
+    desc: 'IA et Analyse de données',
     image:
-      '/hero/heureuse-femme-d-affaires-afro-americaine-travaillant-sur-un-pave-tactile-au-bureau.jpg'
+      '/hero/heureuse-femme-d-affaires-afro-americaine-travaillant-sur-un-pave-tactile-au-bureau.jpg',
+    points: [
+      'Mise en place de solutions d\'intelligence artificielle',
+      'Analyse et visualisation de données métier',
+      'Automatisation des processus (RPA)',
+      'Big Data et prédictions statistiques'
+    ]
   },
   {
     id: 'audit',
-    name: 'Contrôle et Audit',
+    name: 'Expertise en Contrôle de Gestion et Audit',
     desc: 'Audit interne et contrôle de gestion',
     image:
-      '/hero/equipe-de-collegues-afro-americains-analysant-des-rapports-de-vente-sur-des-documents-travaillant-sur-une-strategie-financiere-pour-la-croissance-de-l-entreprise-employes-de-l-entreprise-travaillant-en-equipe.jpg'
+      '/hero/equipe-de-collegues-afro-americains-analysant-des-rapports-de-vente-sur-des-documents-travaillant-sur-une-strategie-financiere-pour-la-croissance-de-l-entreprise-employes-de-l-entreprise-travaillant-en-equipe.jpg',
+    points: [
+      'Audit interne et opérationnel',
+      'Mise en place de manuels de procédures',
+      'Contrôle de gestion et pilotage de la performance',
+      'Gestion des risques et conformité'
+    ]
   },
   {
     id: 'projet',
-    name: 'Gestion de projet',
+    name: 'Expertise en Gestion de Projet',
     desc: 'Pilotage et management de projets',
-    image: '/hero/reunion-d-affaires-dans-un-cafe.jpg'
+    image: '/hero/reunion-d-affaires-dans-un-cafe.jpg',
+    points: [
+      'Planification et suivi de projets complexes',
+      'Gestion des ressources et des budgets',
+      'Accompagnement au changement',
+      'Méthodologies Agiles et Scrum'
+    ]
   }
 ];
 
 export const formations = [
   {
     category: 'MÉTIERS DU NUMÉRIQUE / DIGITAL',
+    objectif: 'Former des jeunes et des femmes capables de concevoir, développer et gérer des solutions numériques, adaptées aux besoins actuels des entreprises, institutions et entrepreneurs.',
+    importance: 'Le numérique est devenu transversal à tous les secteurs. Les compétences digitales sont aujourd’hui indispensables pour l’emploi, l’entrepreneuriat, la compétitivité des entreprises et l’innovation.',
+    debouches: [
+      'Agences digitales et de communication',
+      'Startups et entreprises technologiques',
+      'Banques, ONG, institutions',
+      'Freelance et travail à distance',
+      'E-commerce, médias, services publics'
+    ],
     items: [
       'Communication et Marketing digital',
       'Community management',
@@ -74,6 +131,15 @@ export const formations = [
   },
   {
     category: 'MÉTIERS DE LA GESTION',
+    objectif: 'Former des profils capables d’assurer une gestion administrative, comptable et fiscale efficace, indispensable à toute organisation.',
+    importance: 'La performance et la transparence financière sont devenues des exigences majeures. Une bonne gestion est essentielle pour la pérennité des entreprises et des projets.',
+    debouches: [
+      'Entreprises privées',
+      'Cabinets comptables',
+      'ONG et projets',
+      'Administrations publiques',
+      'Auto-emploi (prestations de gestion)'
+    ],
     items: [
       'Organisation et gestion comptable',
       'Organisation et gestion RH',
@@ -86,31 +152,54 @@ export const formations = [
     ]
   },
   {
-    category: "MÉTIERS DE L'ENTREPRENEURIAT",
+    category: 'MÉTIERS DE L’ENTREPRENEURIAT',
+    objectif: 'Accompagner les jeunes et les femmes à créer, structurer et développer des entreprises viables et durables.',
+    importance: 'Face au chômage et à la mutation du travail, l’entrepreneuriat est un levier clé de création d’emplois, d’innovation et d’autonomie économique.',
+    debouches: [
+      'Création de PME et startups',
+      'Auto-emploi',
+      'Incubateurs et structures d’appui',
+      'Conseil entrepreneurial'
+    ],
     items: [
-      "Création et gestion d'entreprise",
+      'Création et gestion d’entreprise',
       'Élaboration du Business Model et Business Plan',
       'Gestion de projet digital',
       'Pitching et communication entrepreneuriale',
-      "Stratégie digitale d'entreprise",
+      'Stratégie digitale d’entreprise',
       'Gestion financière et mobilisation de financement',
-      "Études de marché & analyse de faisabilité",
-      "Accompagnement à la formalisation d'entreprise"
+      'Études de marché & analyse de faisabilité',
+      'Accompagnement à la formalisation d’entreprise'
     ]
   },
   {
-    category: 'MÉTIERS DE LA PHARMACIE & GESTION DE PHARMACIE',
+    category: 'MÉTIERS MAINTENANCE INFORMATIQUE & RÉSEAUX',
+    objectif: 'Former des techniciens capables d’installer, maintenir et sécuriser les systèmes informatiques et réseaux.',
+    importance: 'Avec la digitalisation croissante, les systèmes informatiques sont au cœur du fonctionnement des organisations, rendant ces compétences stratégiques.',
+    debouches: [
+      'Entreprises et institutions',
+      'Fournisseurs de services Internet',
+      'Centres informatiques',
+      'Auto-emploi (maintenance, installation)'
+    ],
     items: [
-      'Gestionnaire de pharmacie',
-      'Gestion des stocks pharmaceutiques',
-      'CRM et logistique en pharmacie',
-      'Secrétaire et caisse en pharmacie',
-      'Éthique et conformité en milieu pharmaceutique',
-      'Vente et relation client en pharmacie'
+      'Informatique avancée et bases de données',
+      'Maintenance informatique et diagnostic',
+      'Réseaux LAN, WLAN, câblage, routage',
+      'Initiation à Linux (Ubuntu)',
+      'Administration système de base'
     ]
   },
   {
-    category: 'MÉTIERS DE LA GOUVERNANCE, CONTRÔLE & AUDIT',
+    category: 'MÉTIERS GOUVERNANCE, CONTRÔLE & AUDIT',
+    objectif: 'Former des professionnels capables de garantir la transparence, la performance et la gestion des risques.',
+    importance: 'La bonne gouvernance est devenue une exigence mondiale pour la crédibilité, la durabilité et l’accès aux financements.',
+    debouches: [
+      'Cabinets d’audit et de conseil',
+      'Entreprises privées',
+      'Banques et institutions financières',
+      'ONG et projets internationaux'
+    ],
     items: [
       'Audit interne & audit financier',
       'Contrôle de gestion',
@@ -121,7 +210,52 @@ export const formations = [
     ]
   },
   {
-    category: 'MÉTIERS GÉOMÉTRIE ET TOPOGRAPHIE',
+    category: 'MÉTIERS MANAGEMENT & LEADERSHIP',
+    objectif: 'Développer des leaders capables de manager des équipes, communiquer efficacement et piloter la performance.',
+    importance: 'Les organisations ont besoin de leaders adaptables, humains et efficaces, capables de gérer le changement et la diversité.',
+    debouches: [
+      'Management d’entreprise',
+      'ONG et projets',
+      'Administration publique',
+      'Coaching et formation'
+    ],
+    items: [
+      'Leadership et développement personnel',
+      'Communication professionnelle',
+      'Prise de parole en public',
+      'Management des équipes et gestion des conflits',
+      'Gestion du temps et productivité'
+    ]
+  },
+  {
+    category: 'MÉTIERS GESTION DE PHARMACIE',
+    objectif: 'Former des gestionnaires capables d’optimiser la gestion administrative, commerciale et logistique des pharmacies.',
+    importance: 'Une bonne gestion pharmaceutique est essentielle pour la disponibilité des médicaments, la qualité du service et la viabilité économique.',
+    debouches: [
+      'Pharmacies privées',
+      'Dépôts pharmaceutiques',
+      'ONG et projets de santé',
+      'Gestion indépendante de structures'
+    ],
+    items: [
+      'Gestionnaire de pharmacie',
+      'Gestion des stocks pharmaceutiques',
+      'CRM et logistique en pharmacie',
+      'Secrétaire et caisse en pharmacie',
+      'Éthique et conformité en milieu pharmaceutique',
+      'Vente et relation client en pharmacie'
+    ]
+  },
+  {
+    category: 'MÉTIERS GÉOGRAPHIE & TOPOGRAPHIE',
+    objectif: 'Former des techniciens capables de réaliser des travaux topographiques fiables et précis.',
+    importance: 'L’aménagement du territoire et les infrastructures nécessitent des données géospatiales précises, essentielles au développement durable.',
+    debouches: [
+      'BTP et génie civil',
+      'Cabinets de topographie',
+      'Collectivités territoriales',
+      'Projets d’aménagement'
+    ],
     items: [
       'Géométrie et Topographie',
       'Étude de GPS',
@@ -134,6 +268,14 @@ export const formations = [
   },
   {
     category: 'MÉTIERS ART & CUISINE',
+    objectif: 'Valoriser la créativité et la culture comme leviers économiques et d’employabilité.',
+    importance: 'Les industries culturelles et créatives sont des secteurs porteurs, créateurs d’emplois et d’identité culturelle.',
+    debouches: [
+      'Restaurants et hôtels',
+      'Entrepreneuriat culinaire',
+      'Industries créatives',
+      'Événementiel et artisanat'
+    ],
     items: [
       'Géométrie - Topographie',
       'Cuisine africaine & internationale',
@@ -141,30 +283,6 @@ export const formations = [
       'Décoration culinaire & arts de la table',
       'Création artistique & design visuel',
       'Initiation à l’art créatif (dessin, peinture)'
-    ]
-  },
-  {
-    category: 'MÉTIERS DU MANAGEMENT & DU LEADERSHIP',
-    items: [
-      'Leadership et Développement PP',
-      'Communication professionnelle',
-      'Prise de parole en public',
-      'Management des équipes et conflits',
-      'Gestion du temps & productivité',
-      'Coaching professionnel',
-      'Intelligence émotionnelle'
-    ]
-  },
-  {
-    category: 'MÉTIERS DE MAINTENANCE INFORMATIQUE & RÉSEAU',
-    items: [
-      'Informatique avancée / Base de données',
-      'Maintenance informatique & diagnostic',
-      'Réseaux informatiques (LAN, WLAN, routage, câblage)',
-      'Initiation à Linux (Ubuntu)',
-      'Administration système de base',
-      'Bases de données & SQL (initiation)',
-      'Sécurité informatique et protection des données'
     ]
   }
 ];
@@ -225,7 +343,7 @@ export const stats = [
 
 export const entrepreneurServices = [
   "Diagnostic d'entreprise et plan d'action personnalisé",
-  'Appui en communication et visibilité digitale',
+  'Appui en IA et Data et visibilité digitale',
   'Accompagnement à la recherche de financement',
   'Coaching de pitch et présentation aux investisseurs'
 ];
@@ -235,7 +353,7 @@ export const partners = [
   { name: 'YAS', logo: '/images_partenaires/Logo_yas.png' },
   { name: 'TOGO DATA LAB', logo: '/images_partenaires/Logo_togo_data_lab.jpeg' },
   { name: 'UK', logo: '/images_partenaires/Logo_UK.png' },
-  { name: 'CUBE', logo: '/images_partenaires/Logo_Cube.jpeg' },
+  { name: 'N\'DEWONE_KONDJI', logo: '/images_partenaires/N\'DEWONE_KONDJI.jpeg' },
   { name: 'AIESEC', logo: '/images_partenaires/Logo_AIESEC.png' },
   { name: 'cabinet ACTe', logo: '/images_partenaires/Logo_acte.jpeg' },
   { name: 'LEVEL UP TOGO', logo: '/images_partenaires/Logo_Level_Up.jpeg' },

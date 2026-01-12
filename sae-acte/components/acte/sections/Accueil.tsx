@@ -89,9 +89,9 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
       <HeroCarousel
         title={
           <>
-            Appui En Compétences<br />
-            Et En Transformation Pour<br />
-            L'employabilité Des Jeunes
+            Appui en Compétences <br />
+            et en Transformation pour<br />
+            l'Employabilité des Jeunes et Femmes
           </>
         }
         align="left"
@@ -109,6 +109,12 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
           POURQUOI ACTE?
         </button>
       </HeroCarousel>
+
+      <div className="bg-gradient-to-r from-[#00b3ab] to-[#044460] py-4 shadow-inner">
+        <div className="max-w-7xl mx-auto px-4 flex justify-center items-center gap-4">
+          <span className="text-white font-black text-xl tracking-[0.2em]">ODD 1-4-5-8-9-17</span>
+        </div>
+      </div>
 
       {showPourquoiActe && (
         <section className="py-12 bg-white">
@@ -146,18 +152,22 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
 
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold mb-4 text-[#044460]">NOTRE VISION</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Un monde où chaque jeune et femmes grâce aux compétences numériques, managériales et
-                entrepreneuriales s’épanouit et devient acteur du succès, moteur de changement et du
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-black text-[#044460] tracking-tight">Notre Vision & Mission</h2>
+            <SectionAccent className="mx-auto mt-4" />
+          </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div className="bg-[#00b3ab] p-10 text-white shadow-xl rounded-2xl">
+              <h2 className="text-2xl font-black mb-6 text-[#044460] tracking-tighter">Notre Vision</h2>
+              <p className="text-white leading-relaxed font-semibold">
+                Un monde où chaque jeune et femme, grâce aux compétences numériques, managériales et
+                entrepreneuriales, s’épanouit et devient acteur du succès, moteur de changement et du
                 développement socio-économique.
               </p>
             </div>
-            <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
-              <h2 className="text-2xl font-bold mb-4 text-[#044460]">NOTRE MISSION</h2>
-              <p className="text-gray-700 leading-relaxed">
+            <div className="bg-[#00b3ab] p-10 text-white shadow-xl rounded-2xl">
+              <h2 className="text-2xl font-black mb-6 text-[#044460] tracking-tighter">Notre Mission</h2>
+              <p className="text-white leading-relaxed font-semibold">
                 Nous renforçons les compétences des jeunes et femmes au Togo pour réduire le chômage et
                 favoriser le développement socio-économique.
               </p>
@@ -217,9 +227,22 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
                     <h3 className="font-bold text-xl mb-3 text-[#044460] group-hover:text-[#00b3ab] transition-colors">
                       {service.name}
                     </h3>
-                    <p className={`text-sm text-gray-600 leading-relaxed ${isOpen ? '' : 'line-clamp-3'}`}>
+                    <p className={`text-sm text-gray-600 leading-relaxed ${isOpen ? 'mb-4' : 'line-clamp-3'}`}>
                       {service.desc}
                     </p>
+
+                    {isOpen && service.points && (
+                      <div className="mt-4 pt-4 border-t border-[#00b3ab]/10">
+                        <ul className="space-y-2">
+                          {service.points.map((point, i) => (
+                            <li key={i} className="flex items-start gap-2 text-sm text-gray-700">
+                              <span className="text-[#00b3ab] mt-1">✓</span>
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                     
                     <div className="mt-4 flex items-center text-[#00b3ab] font-semibold text-sm">
                       <span className="group-hover:translate-x-1 transition-transform">

@@ -37,9 +37,9 @@ const NavBar = ({ activeTab, onTabChange, mobileMenuOpen, onToggleMobile }: NavB
       <div className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white py-2">
         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+22892215644" className="flex items-center gap-2 hover:text-white/80 transition">
+            <a href="tel:+22892217564" className="flex items-center gap-2 hover:text-white/80 transition">
               <Phone size={16} />
-              <span>+228 92 21 56 44 - 90 87 37 22</span>
+              <span>+228 92 21 75 64 / 98 00 07 59</span>
             </a>
             <span className="text-white/60">|</span>
             <a href="mailto:es.actes@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition">
