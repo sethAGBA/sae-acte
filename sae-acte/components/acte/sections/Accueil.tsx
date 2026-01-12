@@ -9,7 +9,8 @@ import {
   Megaphone,
   Scale,
   Users,
-  ClipboardCheck
+  ClipboardCheck,
+  Brain
 } from 'lucide-react';
 import HeroCarousel from '../HeroCarousel';
 import SectionAccent from '../SectionAccent';
@@ -80,7 +81,7 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
     sociale: Users,
     rh: Users,
     marketing: Megaphone,
-    digital: Globe,
+    digital: Brain,
     audit: ClipboardCheck,
     projet: FolderKanban
   };
