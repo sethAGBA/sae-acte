@@ -122,7 +122,11 @@ const SAEPage = () => (
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-12 w-full object-contain"
+                  className={`w-full object-contain ${
+                    ['LEVEL UP TOGO', 'ECOLABTOGO', 'CRE COMMUNICATION', 'TOGO DATA LAB', 'TILTULAB', "N'DEWONE_KONDJI", 'EZAD BTP', 'Segal family foundation'].includes(partner.name) 
+                      ? 'h-32' 
+                      : 'h-16'
+                  }`}
                   loading="lazy"
                 />
               ) : (

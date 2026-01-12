@@ -1,0 +1,16 @@
+{
+    "name": "SAE ACTE",
+    "short_name": "ACTE",
+    "description": "Appui en Compétences et en Transformation pour l'Employabilité des Jeunes et Femmes",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#044460",
+    "icons": [
+        {
+            "src": "/icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

@@ -50,17 +50,36 @@ export const metadata: Metadata = {
     title: "SAE ACTE | Appui en Compétences et en Transformation pour l'Employabilité des Jeunes et Femmes",
     description:
       "Formations metiers, insertion professionnelle, entrepreneuriat et accompagnement pour talents et entreprises.",
-    siteName: "SAE ACTE"
+    siteName: "SAE ACTE",
+    images: [
+      {
+        url: "/logo-acte.png",
+        width: 800,
+        height: 600,
+        alt: "SAE ACTE Logo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "SAE ACTE | Appui en Compétences et en Transformation pour l'Employabilité des Jeunes et Femmes",
     description:
-      "Formations metiers, insertion professionnelle, entrepreneuriat et accompagnement pour talents et entreprises."
+      "Formations metiers, insertion professionnelle, entrepreneuriat et accompagnement pour talents et entreprises.",
+    images: ["/logo-acte.png"],
   },
   alternates: {
     canonical: "https://sae-acte.com"
-  }
+  },
+  icons: {
+    icon: [
+      { url: "/icon.png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [
+      { url: "/icon.png" },
+    ],
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

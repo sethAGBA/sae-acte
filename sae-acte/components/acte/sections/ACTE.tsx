@@ -15,8 +15,7 @@ const ACTEPage = () => {
       <HeroCarousel
         title="ACTE"
         lines={[
-          'Appui en Compétences et en Transformation',
-          "Pour l'Employabilité des Jeunes et Femmes"
+          'Appui en Compétences et en Transformation pour l\'Employabilité des Jeunes et Femmes'
         ]}
         images={[
           '/hero/le-candidat-s-adresse-au-directeur-de-l-embauche.jpg',
@@ -110,7 +109,11 @@ const ACTEPage = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-12 w-full object-contain"
+                    className={`w-full object-contain ${
+                      ['LEVEL UP TOGO', 'ECOLABTOGO', 'CRE COMMUNICATION', 'TOGO DATA LAB', 'TILTULAB', "N'DEWONE_KONDJI", 'EZAD BTP', 'Segal family foundation'].includes(partner.name) 
+                        ? 'h-32' 
+                        : 'h-16'
+                    }`}
                     loading="lazy"
                   />
                 ) : (

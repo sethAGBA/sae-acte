@@ -87,22 +87,19 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
   return (
     <div>
       <HeroCarousel
-        title={
-          <>
-            Appui en Compétences <br />
-            et en Transformation pour<br />
-            l'Employabilité des Jeunes et Femmes
-          </>
-        }
+        title="Appui en Compétences et en Transformation pour l'Employabilité des Jeunes et Femmes"
+        /* lines={[
+          "Un accompagnement sur mesure pour booster vos compétences, transformer votre potentiel et faciliter votre insertion professionnelle."
+        ]} */
         align="left"
         images={[
-          '/hero/heureuse-femme-d-affaires-afro-americaine-travaillant-sur-un-pave-tactile-au-bureau.jpg',
+          '/hero/le-candidat-s-adresse-au-directeur-de-l-embauche.jpg',
           '/hero/equipe.png',
           '/hero/reunion-d-affaires-dans-un-cafe.jpg'
         ]}
       >
         <button
-          className="bg-white text-[#008080] px-7 py-2.5 rounded-md font-semibold text-base hover:bg-gray-100 transition shadow-lg"
+          className="bg-white text-[#044460] px-8 py-3 rounded-lg font-bold text-sm tracking-wider hover:bg-gray-100 transition shadow-xl"
           onClick={() => setShowPourquoiActe((prev) => !prev)}
           aria-expanded={showPourquoiActe}
         >
@@ -159,7 +156,7 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
           <div className="grid gap-8 md:grid-cols-2">
             <div className="bg-[#00b3ab] p-10 text-white shadow-xl rounded-2xl">
               <h2 className="text-2xl font-black mb-6 text-[#044460] tracking-tighter">Notre Vision</h2>
-              <p className="text-white leading-relaxed font-semibold">
+              <p className="text-white leading-relaxed">
                 Un monde où chaque jeune et femme, grâce aux compétences numériques, managériales et
                 entrepreneuriales, s’épanouit et devient acteur du succès, moteur de changement et du
                 développement socio-économique.
@@ -167,7 +164,7 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
             </div>
             <div className="bg-[#00b3ab] p-10 text-white shadow-xl rounded-2xl">
               <h2 className="text-2xl font-black mb-6 text-[#044460] tracking-tighter">Notre Mission</h2>
-              <p className="text-white leading-relaxed font-semibold">
+              <p className="text-white leading-relaxed">
                 Nous renforçons les compétences des jeunes et femmes au Togo pour réduire le chômage et
                 favoriser le développement socio-économique.
               </p>
@@ -438,17 +435,19 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
             {partners.map((partner) => (
               <div
                 key={partner.name}
-                className="border border-gray-200 bg-white rounded-lg px-4 py-6 text-sm font-semibold text-[#044460] flex items-center justify-center"
+                className="border border-gray-100 bg-white rounded-xl p-4 text-sm font-semibold text-[#044460] flex items-center justify-center shadow-sm"
               >
                 {partner.logo ? (
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className={`w-full object-contain ${
-                      partner.name === 'LEVEL UP TOGO' ? 'h-16' : 'h-12'
-                    }`}
-                    loading="lazy"
-                  />
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className={`w-full object-contain ${
+                        ['LEVEL UP TOGO', 'ECOLABTOGO', 'CRE COMMUNICATION', 'TOGO DATA LAB', 'TILTULAB', "N'DEWONE_KONDJI", 'EZAD BTP', 'Segal family foundation'].includes(partner.name) 
+                          ? 'h-32' 
+                          : 'h-16'
+                      }`}
+                      loading="lazy"
+                    />
                 ) : (
                   partner.name
                 )}

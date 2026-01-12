@@ -349,7 +349,7 @@ export const entrepreneurServices = [
 ];
 
 export const partners = [
-  { name: 'Segal family foundation' },
+  { name: 'Segal family foundation', logo: '/images_partenaires/SFF-Mobile-Logo.svg' },
   { name: 'YAS', logo: '/images_partenaires/Logo_yas.png' },
   { name: 'TOGO DATA LAB', logo: '/images_partenaires/Logo_togo_data_lab.jpeg' },
   { name: 'UK', logo: '/images_partenaires/Logo_UK.png' },
@@ -362,7 +362,7 @@ export const partners = [
   { name: 'EZAD BTP', logo: '/images_partenaires/Logo_EZAD_BTP.png' },
   { name: 'AMAC GC' },
   { name: 'CABINET FORCE DE LA NATURE' },
-  { name: 'STARLAB' },
+  { name: 'STARLAB', logo: '/images_partenaires/STARLAB.png' },
   { name: 'ECOLABTOGO', logo: '/images_partenaires/Logo_ECOLABTOGO.jpeg' },
   { name: 'TOGOCARE' },
   { name: 'EGLIX' },

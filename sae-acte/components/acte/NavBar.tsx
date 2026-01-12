@@ -34,8 +34,14 @@ const NavBar = ({ activeTab, onTabChange, mobileMenuOpen, onToggleMobile }: NavB
   return (
     <nav className="sticky top-0 z-50 shadow-lg">
       {/* Top bar avec contacts et réseaux sociaux */}
-      <div className="bg-gradient-to-r from-[#044460] to-[#00b3ab] text-white py-2">
-        <div className="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
+      <div className="relative overflow-hidden bg-[#044460] text-white py-2">
+        {/* Separateur diagonal et zone teal (matching image) */}
+        <div 
+          className="absolute inset-y-0 right-0 w-[55%] bg-gradient-to-r from-[#00b3ab] to-[#00b3ab]/80 transform"
+          style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)' }}
+        />
+        
+        <div className="relative max-w-7xl mx-auto px-4 flex justify-between items-center text-sm z-10">
           <div className="flex items-center gap-6">
             <a href="tel:+22892217564" className="flex items-center gap-2 hover:text-white/80 transition">
               <Phone size={16} />
@@ -67,7 +73,7 @@ const NavBar = ({ activeTab, onTabChange, mobileMenuOpen, onToggleMobile }: NavB
             <div className="flex items-center gap-3">
               <Link href="/">
                 <img
-                  src="/icons/Fichier%201.svg"
+                  src="/logo-acte.png"
                   alt="ACTE"
                   className="h-16 w-auto object-contain"
                 />
