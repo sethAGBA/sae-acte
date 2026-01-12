@@ -41,15 +41,15 @@ const NavBar = ({ activeTab, onTabChange, mobileMenuOpen, onToggleMobile }: NavB
           style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)' }}
         />
         
-        <div className="relative max-w-7xl mx-auto px-4 flex justify-between items-center text-sm z-10">
-          <div className="flex items-center gap-6">
-            <a href="tel:+22892217564" className="flex items-center gap-2 hover:text-white/80 transition">
-              <Phone size={16} />
+        <div className="relative max-w-7xl mx-auto px-4 flex justify-between items-center text-[11px] sm:text-xs z-10">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
+            <a href="tel:+22892217564" className="flex items-center gap-2 hover:text-white/80 transition whitespace-nowrap">
+              <Phone size={14} className="sm:w-4 sm:h-4" />
               <span>+228 92 21 75 64 / 98 00 07 59</span>
             </a>
-            <span className="text-white/60">|</span>
-            <a href="mailto:es.actes@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition">
-              <Mail size={16} />
+            <span className="hidden sm:block text-white/60">|</span>
+            <a href="mailto:es.actes@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition whitespace-nowrap">
+              <Mail size={14} className="sm:w-4 sm:h-4" />
               <span>es.actes@gmail.com</span>
             </a>
           </div>
