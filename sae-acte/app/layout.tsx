@@ -41,7 +41,11 @@ export const metadata: Metadata = {
     "insertion professionnelle",
     "entrepreneuriat",
     "accompagnement",
-    "Togo"
+    "Togo",
+    "cabinet ACTe",
+    "ACTE",
+    "acte"
+
   ],
   authors: [{ name: "SAE ACTE" }],
   openGraph: {
