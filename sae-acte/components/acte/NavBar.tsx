@@ -42,13 +42,13 @@ const NavBar = ({ activeTab, onTabChange, mobileMenuOpen, onToggleMobile }: NavB
         />
         
         <div className="relative max-w-7xl mx-auto px-4 flex justify-between items-center text-[11px] sm:text-xs z-10">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
-            <a href="tel:+22892217564" className="flex items-center gap-2 hover:text-white/80 transition whitespace-nowrap">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-6 w-full sm:w-auto">
+            <a href="tel:+22892217564" className="flex items-center gap-2 hover:text-white/80 transition whitespace-nowrap self-start">
               <Phone size={14} className="sm:w-4 sm:h-4" />
               <span>+228 92 21 75 64 / 98 00 07 59</span>
             </a>
             <span className="hidden sm:block text-white/60">|</span>
-            <a href="mailto:es.actes@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition whitespace-nowrap">
+            <a href="mailto:es.actes@gmail.com" className="flex items-center gap-2 hover:text-white/80 transition whitespace-nowrap self-end sm:self-auto">
               <Mail size={14} className="sm:w-4 sm:h-4" />
               <span>es.actes@gmail.com</span>
             </a>
