@@ -284,8 +284,214 @@ export const formations = [
       'Création artistique & design visuel',
       'Initiation à l’art créatif (dessin, peinture)'
     ]
+  },
+  {
+    category: 'PARCOURS EXPERTISE FISCALE',
+    objectif: 'ACTE propose une formation pratique en Expertise Fiscale destinée aux jeunes et aux femmes souhaitant acquérir des compétences solides en fiscalité appliquée.',
+    importance: 'Cette formation est conçue pour répondre aux exigences réelles du marché du travail et permettre aux apprenants de maîtriser les obligations fiscales des entreprises et des particuliers.',
+    duree: '3 mois (Licence) / 6-9 mois (BAC+2)',
+    debouches: [
+      'Assistant fiscal',
+      'Agent fiscal en entreprise',
+      'Gestionnaire fiscal',
+      'Conseiller fiscal junior',
+      'Comptable spécialisé en fiscalité',
+      'Agent dans un cabinet comptable',
+      'Collaborateur en administration fiscale'
+    ],
+    items: [
+      'Introduction à la fiscalité',
+      'Fiscalité des entreprises (IS, TVA, TP)',
+      'Déclarations fiscales mensuelles et annuelles',
+      'Contrôle et contentieux fiscal',
+      'Optimisation fiscale',
+      'Cas pratiques et simulations',
+      'Utilisation des outils et textes fiscaux'
+    ],
+    resultats: [
+      'Gérer les obligations fiscales d’une entreprise',
+      'Préparer et déposer les déclarations fiscales',
+      'Conseiller sur la conformité fiscale',
+      'Réduire les risques de sanctions',
+      'Accompagner les entrepreneurs sur le plan fiscal'
+    ]
+  },
+  {
+    category: 'PARCOURS EXPERTISE SOCIALE',
+    objectif: 'Développer des compétences solides dans la gestion des questions sociales, l’accompagnement communautaire et la mise en œuvre de projets à impact social.',
+    importance: 'Cette formation est 100 % pratique, orientée vers les réalités du terrain et les besoins actuels des ONG, entreprises et institutions publiques.',
+    duree: '3 mois (Licence) / 6-9 mois (BAC+2)',
+    debouches: [
+      'Assistant(e) social(e)',
+      'Agent de développement communautaire',
+      'Chargé(e) de projets sociaux',
+      'Animateur(trice) communautaire',
+      'Responsable suivi-évaluation',
+      'Intervenant(e) social(e)',
+      'Consultant(e) junior en développement social'
+    ],
+    items: [
+      'Introduction à l’expertise sociale',
+      'Diagnostic social et analyse des besoins',
+      'Accompagnement des populations',
+      'Gestion de projets sociaux',
+      'Inclusion sociale et protection des groupes vulnérables',
+      'Communication sociale et mobilisation communautaire',
+      'Stage pratique / Projet de terrain'
+    ],
+    resultats: [
+      'Des compétences pratiques en gestion sociale',
+      'Une expérience terrain significative',
+      'Une capacité d’insertion rapide sur le marché du travail'
+    ]
+  },
+  {
+    category: 'PARCOURS EXPERTISE RH',
+    objectif: 'Former des profils opérationnels, capables de gérer efficacement le capital humain d’une organisation, conformément aux réalités du marché du travail.',
+    importance: 'La formation met l’accent sur la gestion administrative, le recrutement, la paie et le développement des compétences.',
+    duree: '3 mois (Licence) / 6-9 mois (BAC+2)',
+    debouches: [
+      'Assistant(e) RH',
+      'Chargé(e) du recrutement',
+      'Gestionnaire du personnel',
+      'Agent administratif RH',
+      'Responsable RH junior',
+      'Consultant RH',
+      'Gestionnaire de paie'
+    ],
+    items: [
+      'Fondamentaux des Ressources Humaines',
+      'Recrutement & Intégration',
+      'Gestion Administrative du Personnel',
+      'Droit du Travail & Relations Sociales',
+      'Paie & Rémunération',
+      'Gestion des Performances',
+      'Formation & Développement',
+      'Outils RH (Excel RH, Logiciels)'
+    ],
+    resultats: [
+      'Gestion autonome d\'un service RH',
+      'Maîtrise de la paie et des déclarations sociales',
+      'Capacité à mener des recrutements efficaces'
+    ]
+  },
+  {
+    category: 'PARCOURS EXPERTISE CMD',
+    objectif: 'Former des profils compétents en communication stratégique et en marketing digital pour promouvoir efficacement une marque ou un projet.',
+    importance: 'Accompagner les jeunes et les femmes à travers des formations pratiques adaptées aux besoins du marché numérique en pleine croissance.',
+    duree: '3 mois (Licence) / 6-9 mois (BAC+2)',
+    debouches: [
+      'Community Manager',
+      'Chargé de communication',
+      'Assistant marketing digital',
+      'Créateur de contenu',
+      'Social Media Manager',
+      'Freelance en marketing digital',
+      'Entrepreneur digital'
+    ],
+    items: [
+      'Bases de la communication professionnelle',
+      'Rédaction de contenus et Storytelling',
+      'Réseaux sociaux (FB, IG, TikTok, LinkedIn)',
+      'Publicité en ligne (Meta Ads, WhatsApp Business)',
+      'Design graphique et Montage vidéo (Canva, CapCut)',
+      'SEO et Email marketing',
+      'Projet pratique (Lancement de page réelle)'
+    ],
+    resultats: [
+      'Maîtriser les bases de la communication moderne',
+      'Utiliser les outils du marketing digital',
+      'Créer du contenu professionnel',
+      'Développer la visibilité d’une entreprise en ligne',
+      'Gérer des campagnes digitales efficaces'
+    ]
+  },
+  {
+    category: 'PARCOURS EXPERTISE IA & DATA',
+    objectif: 'Acquérir des compétences concrètes en Intelligence Artificielle et Data pour automatiser, prédire et optimiser les décisions.',
+    importance: 'Développer des projets pratiques orientés business, communication, finance et innovation grâce aux outils modernes.',
+    duree: '3 mois (Licence) / 6-9 mois (BAC+2)',
+    debouches: [
+      'Data Analyst junior',
+      'Assistant IA',
+      'Chargé d’analyse de données',
+      'Agent d’automatisation',
+      'Consultant digital junior',
+      'Support IA en entreprise'
+    ],
+    items: [
+      'Bases de la Data (Collecte, Nettoyage)',
+      'Analyse et Visualisation (Power BI, Power Study)',
+      'Introduction à l’IA et Machine Learning',
+      'Outils IA (ChatGPT, IA générative, Automatisation)',
+      'Résolution de problèmes concrets par la data',
+      'Employabilité (Portfolio de projets)'
+    ],
+    resultats: [
+      'Comprendre les bases de la data et de l’IA',
+      'Savoir analyser des données et en tirer des décisions utiles',
+      'Utiliser des outils modernes pour optimiser les processus'
+    ]
+  },
+  {
+    category: 'PARCOURS EXPERTISE CONTRÔLE DE GESTION ET AUDIT',
+    objectif: 'Former des profils capables de suivre la performance financière et de participer aux missions d’audit.',
+    importance: 'Approche 100 % orientée pratique, avec des cas réels et des outils utilisés en entreprise pour appuyer la décision stratégique.',
+    duree: '3 mois (Licence) / 6-9 mois (BAC+2)',
+    debouches: [
+      'Assistant contrôleur de gestion',
+      'Assistant auditeur',
+      'Comptable junior',
+      'Agent de suivi budgétaire',
+      'Chargé de reporting financier'
+    ],
+    items: [
+      'Bases de la comptabilité et lecture des états',
+      'Budgétisation et gestion des coûts',
+      'Tableaux de bord et KPI',
+      'Principes de l’audit interne et externe',
+      'Évaluation des risques et procédures',
+      'Excel avancé et Reporting financier'
+    ],
+    resultats: [
+      'Gérer l’information financière',
+      'Contrôler les dépenses',
+      'Améliorer la performance des organisations',
+      'Garantir la transparence financière'
+    ]
+  },
+  {
+    category: 'PARCOURS EXPERTISE GESTION DE PROJETS',
+    objectif: 'Former des chargés de projet opérationnels, capables de concevoir, planifier, exécuter et évaluer des projets.',
+    importance: 'Compétences directement applicables dans différents secteurs : développement, entrepreneuriat, ONG, institutions publiques.',
+    duree: '3 mois (Licence) / 6-9 mois (BAC+2)',
+    debouches: [
+      'Chargé(e) de projet',
+      'Assistant(e) de projet',
+      'Coordinateur(trice) de projet',
+      'Chef(fe) de projet junior',
+      'Agent de suivi-évaluation',
+      'Consultant(e) junior',
+      'Entrepreneur(e)'
+    ],
+    items: [
+      'Identification et formulation de projet',
+      'Planification (Cadre logique, Chronogramme)',
+      'Outils de gestion (Gantt, SMART, SWOT)',
+      'Gestion financière et budgétisation',
+      'Suivi – Évaluation et Collecte de données',
+      'Gestion des risques et Leadership',
+      'Montage et présentation de projets réels'
+    ],
+    resultats: [
+      'Concevoir un projet de A à Z',
+      'Planifier efficacement les ressources',
+      'Gérer un budget et suivre les dépenses',
+      'Rédiger des rapports professionnels convaincants'
+    ]
   }
 ];
+
 
 export const valeurs = [
   { icon: 'collaboration', title: 'Collaboration', desc: 'La force du collectif pour réussir' },
@@ -349,7 +555,7 @@ export const entrepreneurServices = [
 ];
 
 export const partners = [
-  { name: 'Segal family foundation', logo: '/images_partenaires/SFF-Mobile-Logo.svg' },
+  { name: 'Segal family foundation', logo: '/images_partenaires/SOCIAL_IMPACT_INCUBATOR.jpg' },
   { name: 'YAS', logo: '/images_partenaires/Logo_yas.png' },
   { name: 'TOGO DATA LAB', logo: '/images_partenaires/Logo_togo_data_lab.jpeg' },
   { name: 'UK', logo: '/images_partenaires/Logo_UK.png' },
@@ -361,9 +567,9 @@ export const partners = [
   { name: 'FAEIJ', logo: '/images_partenaires/Logo_FAEIJ.png' },
   { name: 'EZAD BTP', logo: '/images_partenaires/Logo_EZAD_BTP.png' },
   { name: 'AMAC GC' },
-  { name: 'CABINET FORCE DE LA NATURE' },
+  { name: 'CABINET FORCE DE LA NATURE', logo: '/images_partenaires/CABINET_FORCE DE_LA_NATURE.jpg' },
   { name: 'STARLAB', logo: '/images_partenaires/STARLAB.png' },
-  { name: 'ECOLABTOGO', logo: '/images_partenaires/Logo_ECOLABTOGO.jpeg' },
+  { name: 'MCFD', logo: '/images_partenaires/LOGO_MCFD.png' },
   { name: 'TOGOCARE' },
   { name: 'EGLIX' },
   { name: 'MIGEC GROUP', logo: '/images_partenaires/Logo_MIGEC_GROUP.jpeg' },

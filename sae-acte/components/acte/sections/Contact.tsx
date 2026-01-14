@@ -20,7 +20,7 @@ const ContactPage = ({ contactForm, onContactChange, onSubmit, status }: Contact
   <div>
     <HeroCarousel
       title="Contactez-nous"
-      lines={['Nous sommes a votre ecoute']}
+      lines={['Nous sommes à votre écoute']}
       images={[
         '/hero/scene-de-bureau-avec-ordinateur-portable.jpg',
         '/hero/heureuse-femme-d-affaires-afro-americaine-travaillant-sur-un-pave-tactile-au-bureau.jpg',
@@ -53,9 +53,9 @@ const ContactPage = ({ contactForm, onContactChange, onSubmit, status }: Contact
                   <div className="text-gray-600">es.actes@gmail.com</div>
                 </div>
               </div>
-              <a 
-                href="https://share.google/ZVRZFzAppg4q1svWK" 
-                target="_blank" 
+              <a
+                href="https://share.google/ZVRZFzAppg4q1svWK"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start gap-4 group"
               >
@@ -89,8 +89,8 @@ const ContactPage = ({ contactForm, onContactChange, onSubmit, status }: Contact
 
           <div className="bg-white rounded-3xl border border-[#044460]/10 shadow-sm p-8">
             <h2 className="text-2xl font-bold mb-4 text-[#044460]">Envoyez-nous un message</h2>
-            <form 
-              action="https://formspree.io/f/mjggvkzp" 
+            <form
+              action="https://formspree.io/f/mjggvkzp"
               method="POST"
               className="space-y-4"
               onSubmit={(e) => {

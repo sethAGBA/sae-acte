@@ -174,7 +174,7 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
         </div>
       </section>
 
-   <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#044460]">
@@ -196,11 +196,10 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
               return (
                 <button
                   key={service.id}
-                  className={`group text-left bg-white rounded-2xl overflow-hidden transition-all duration-300 ${
-                    isOpen 
-                      ? 'ring-4 ring-[#00b3ab]/30 shadow-2xl scale-105' 
-                      : 'shadow-lg hover:shadow-2xl hover:scale-105'
-                  }`}
+                  className={`group text-left bg-white rounded-2xl overflow-hidden transition-all duration-300 ${isOpen
+                    ? 'ring-4 ring-[#00b3ab]/30 shadow-2xl scale-105'
+                    : 'shadow-lg hover:shadow-2xl hover:scale-105'
+                    }`}
                   onClick={() => onToggleService(service.id)}
                   type="button"
                 >
@@ -220,7 +219,7 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="p-6">
                     <h3 className="font-bold text-xl mb-3 text-[#044460] group-hover:text-[#00b3ab] transition-colors">
                       {service.name}
@@ -241,15 +240,15 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
                         </ul>
                       </div>
                     )}
-                    
+
                     <div className="mt-4 flex items-center text-[#00b3ab] font-semibold text-sm">
                       <span className="group-hover:translate-x-1 transition-transform">
                         {isOpen ? 'Voir moins' : 'En savoir plus'}
                       </span>
-                      <svg 
-                        className={`ml-2 h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : 'group-hover:translate-x-1'}`} 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
+                      <svg
+                        className={`ml-2 h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : 'group-hover:translate-x-1'}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
                         stroke="currentColor"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -282,11 +281,11 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
                 ✓ Suivi post-formation
               </span>
             </div> */}
-            
+
           {/* </div> */}
         </div>
       </section>
-{/* NOS VALEURS */}
+      {/* NOS VALEURS */}
       {/* <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="relative flex items-center justify-center">
@@ -362,8 +361,8 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
             {valeurs.map((valeur, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-8 hover:bg-white hover:shadow-2xl transition-all duration-500 border border-white/20 hover:scale-105"
               >
                 <h3 className="font-bold text-xl mb-3 text-white group-hover:text-[#044460] transition-colors text-center">
@@ -388,10 +387,10 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#044460] to-[#055570] border-2 border-white"></div>
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#00b3ab] to-[#008b85] border-2 border-white"></div>
               </div> */}
-              {/* <p className="text-white font-semibold">
+          {/* <p className="text-white font-semibold">
                 Des valeurs incarnées par toute notre équipe
               </p> */}
-            {/* </div> */}
+          {/* </div> */}
           {/* </div> */}
         </div>
       </section>
@@ -439,16 +438,15 @@ const AccueilPage = ({ expandedService, onToggleService, onContactClick }: Accue
                 className="border border-gray-100 bg-white rounded-xl p-4 text-sm font-semibold text-[#044460] flex items-center justify-center shadow-sm"
               >
                 {partner.logo ? (
-                    <img
-                      src={partner.logo}
-                      alt={partner.name}
-                      className={`w-full object-contain ${
-                        ['LEVEL UP TOGO', 'ECOLABTOGO', 'CRE COMMUNICATION', 'TOGO DATA LAB', 'TILTULAB', "N'DEWONE_KONDJI", 'EZAD BTP', 'Segal family foundation'].includes(partner.name) 
-                          ? 'h-32' 
-                          : 'h-16'
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className={`w-full object-contain ${['LEVEL UP TOGO', 'MCFD', 'CRE COMMUNICATION', 'TOGO DATA LAB', 'TILTULAB', "N'DEWONE_KONDJI", 'EZAD BTP', 'Segal family foundation', 'CABINET FORCE DE LA NATURE'].includes(partner.name)
+                      ? 'h-32'
+                      : 'h-16'
                       }`}
-                      loading="lazy"
-                    />
+                    loading="lazy"
+                  />
                 ) : (
                   partner.name
                 )}

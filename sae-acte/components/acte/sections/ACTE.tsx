@@ -58,7 +58,7 @@ const ACTEPage = () => {
                         ))}
                       </div>
                       <div className="mt-6 flex flex-wrap items-center gap-3">
-                        <button 
+                        <button
                           className="border border-[#044460] text-[#044460] px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#044460]/10 transition"
                           onClick={() => setSelectedFormation(formation)}
                         >
@@ -109,11 +109,10 @@ const ACTEPage = () => {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className={`w-full object-contain ${
-                      ['LEVEL UP TOGO', 'ECOLABTOGO', 'CRE COMMUNICATION', 'TOGO DATA LAB', 'TILTULAB', "N'DEWONE_KONDJI", 'EZAD BTP', 'Segal family foundation'].includes(partner.name) 
-                        ? 'h-32' 
+                    className={`w-full object-contain ${['LEVEL UP TOGO', 'ECOLABTOGO', 'CRE COMMUNICATION', 'TOGO DATA LAB', 'TILTULAB', "N'DEWONE_KONDJI", 'EZAD BTP', 'Segal family foundation'].includes(partner.name)
+                        ? 'h-32'
                         : 'h-16'
-                    }`}
+                      }`}
                     loading="lazy"
                   />
                 ) : (
@@ -167,7 +166,7 @@ const ACTEPage = () => {
       {selectedFormation && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[#044460]/40 backdrop-blur-sm animate-in fade-in duration-300">
           <div className="bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative animate-in zoom-in-95 duration-300">
-            <button 
+            <button
               onClick={() => setSelectedFormation(null)}
               className="absolute top-6 right-6 p-2 rounded-full hover:bg-gray-100 transition-colors z-10"
             >
@@ -178,14 +177,19 @@ const ACTEPage = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-[#044460] mb-2 pr-12">
                 {selectedFormation.category}
               </h3>
+              {(selectedFormation as any).duree && (
+                <p className="text-[#00b3ab] font-bold mb-4 tracking-wide uppercase text-sm">
+                  Durée : {(selectedFormation as any).duree}
+                </p>
+              )}
               <div className="h-1.5 w-20 bg-[#00b3ab] rounded-full mb-8"></div>
 
               <div className="space-y-8">
                 {selectedFormation.objectif && (
                   <div>
                     <h4 className="text-lg font-bold text-[#044460] mb-3 uppercase tracking-wider text-sm flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
-                       Objectif
+                      <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
+                      Objectif
                     </h4>
                     <p className="text-gray-700 leading-relaxed bg-[#f4fbfa] p-4 rounded-2xl border border-[#00b3ab]/10">
                       {selectedFormation.objectif}
@@ -195,8 +199,8 @@ const ACTEPage = () => {
 
                 <div>
                   <h4 className="text-lg font-bold text-[#044460] mb-4 uppercase tracking-wider text-sm flex items-center gap-2">
-                     <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
-                     Contenu détaillé
+                    <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
+                    Contenu détaillé
                   </h4>
                   <div className="grid sm:grid-cols-2 gap-3">
                     {selectedFormation.items.map((item) => (
@@ -211,8 +215,8 @@ const ACTEPage = () => {
                 {selectedFormation.importance && (
                   <div>
                     <h4 className="text-lg font-bold text-[#044460] mb-3 uppercase tracking-wider text-sm flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
-                       Importance de la formation
+                      <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
+                      Importance de la formation
                     </h4>
                     <p className="text-gray-700 text-sm leading-relaxed italic">
                       "{selectedFormation.importance}"
@@ -223,8 +227,8 @@ const ACTEPage = () => {
                 {selectedFormation.debouches && (
                   <div>
                     <h4 className="text-lg font-bold text-[#044460] mb-4 uppercase tracking-wider text-sm flex items-center gap-2">
-                       <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
-                       Débouchés & secteurs
+                      <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
+                      Débouchés & secteurs
                     </h4>
                     <ul className="grid sm:grid-cols-2 gap-3">
                       {selectedFormation.debouches.map((debouche) => (
@@ -236,10 +240,27 @@ const ACTEPage = () => {
                     </ul>
                   </div>
                 )}
+
+                {(selectedFormation as any).resultats && (
+                  <div>
+                    <h4 className="text-lg font-bold text-[#044460] mb-4 uppercase tracking-wider text-sm flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-[#00b3ab] rounded-full"></span>
+                      Résultats attendus
+                    </h4>
+                    <ul className="space-y-3">
+                      {(selectedFormation as any).resultats.map((result: string, i: number) => (
+                        <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
+                          <CheckCircle className="w-5 h-5 text-[#00b3ab] mt-0.5 shrink-0" />
+                          <span>{result}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
 
               <div className="mt-10 pt-8 border-t border-gray-100">
-                <button 
+                <button
                   className="w-full bg-[#044460] text-white py-4 rounded-2xl font-bold hover:shadow-xl hover:shadow-[#044460]/20 transition-all duration-300 transform active:scale-[0.98]"
                   onClick={() => setSelectedFormation(null)}
                 >

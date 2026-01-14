@@ -43,14 +43,12 @@ const HeroCarousel = ({
       {heroImages.map((img, idx) => (
         <div
           key={img}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            idx === activeIndex ? 'opacity-100 z-0' : 'opacity-0 -z-10'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${idx === activeIndex ? 'opacity-100 z-0' : 'opacity-0 -z-10'
+            }`}
         >
           <div
-            className={`absolute inset-0 bg-cover bg-center ${
-              idx === activeIndex ? 'animate-ken-burns' : ''
-            }`}
+            className={`absolute inset-0 bg-cover bg-center ${idx === activeIndex ? 'animate-ken-burns' : ''
+              }`}
             style={{ backgroundImage: `url('${img}')` }}
           />
           {/* Premium Blue-to-Teal Overlay */}
@@ -71,7 +69,7 @@ const HeroCarousel = ({
                 {lines.map((line, index) => (
                   <p
                     key={`${line}-${index}`}
-                    className="text-lg md:text-xl text-white/90 font-medium leading-relaxed max-w-2xl"
+                    className={`text-lg md:text-xl text-white/90 font-medium leading-relaxed max-w-2xl ${align === 'center' ? 'mx-auto' : ''}`}
                   >
                     {line}
                   </p>
@@ -89,11 +87,10 @@ const HeroCarousel = ({
           <button
             key={index}
             type="button"
-            className={`transition-all duration-500 rounded-full ${
-              index === activeIndex 
-                ? 'w-10 h-2 bg-gradient-to-r from-[#044460] to-[#00b3ab] shadow-[0_0_15px_rgba(4,68,96,0.3)]' 
+            className={`transition-all duration-500 rounded-full ${index === activeIndex
+                ? 'w-10 h-2 bg-gradient-to-r from-[#044460] to-[#00b3ab] shadow-[0_0_15px_rgba(4,68,96,0.3)]'
                 : 'w-2 h-2 bg-white/40 hover:bg-white/60'
-            }`}
+              }`}
             onClick={() => setActiveIndex(index)}
             aria-label={`Aller à la slide ${index + 1}`}
           />
