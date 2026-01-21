@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import NavBar from '@/components/acte/NavBar';
 import Footer from '@/components/acte/Footer';
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 const nexa = localFont({
@@ -99,6 +100,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
